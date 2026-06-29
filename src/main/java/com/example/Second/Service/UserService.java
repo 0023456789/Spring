@@ -6,8 +6,6 @@ import com.example.Second.dto.request.UserUpdateRequest;
 import com.example.Second.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -18,6 +16,8 @@ public class UserService {
 
     public User createUser(UserCreationRequest request){
         User user = new User();
+        if (userRepository.existsByUsername(request.getUsername()))
+                throw new RuntimeException("User existed");
         user.setFullName((request.getFullName()));
         user.setDateOfBirth(request.getDateOfBirth());
         user.setPassword(request.getPassword());
