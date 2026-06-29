@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /Second
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3307/databases"
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
