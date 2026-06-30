@@ -9,6 +9,15 @@ import java.time.LocalDate;
 
 @Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+    private String username;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private LocalDate dob;
+
     public String getId() {
         return id;
     }
@@ -33,27 +42,27 @@ public class User {
         this.password = password;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
-    private String username;
-    private String password;
-    private String fullName;
-    private LocalDate dateOfBirth;
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
 }
