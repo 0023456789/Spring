@@ -4,8 +4,9 @@ import java.time.LocalDate;
 
 public class UserUpdateRequest {
     private String password;
-    private String fullName;
-    private LocalDate dateOfBirth;
+    private String firstName;
+    private String lastName;
+    private LocalDate dob;
 
     public String getPassword() {
         return password;
@@ -15,19 +16,27 @@ public class UserUpdateRequest {
         this.password = password;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
     }
 }

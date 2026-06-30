@@ -1,6 +1,7 @@
 package com.example.Second.Controller;
 
 import com.example.Second.Service.UserService;
+import com.example.Second.dto.request.ApiResponse;
 import com.example.Second.dto.request.UserCreationRequest;
 import com.example.Second.dto.request.UserUpdateRequest;
 import com.example.Second.entity.User;
@@ -15,9 +16,14 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+
     @PostMapping
-    User createUser(@RequestBody @Valid UserCreationRequest request){
-        return userService.createUser(request);
+    ApiResponse<User> createUser(@RequestBody @Valid UserCreationRequest request){
+        ApiResponse<User> apiResponse = new ApiResponse<>();
+
+        apiResponse.setResult(userService.createUser(request));
+
+        return apiResponse;
     }
 
     @GetMapping
@@ -32,12 +38,12 @@ public class UserController {
 
     @PutMapping("/{userId}")
     User updateUser(@PathVariable String userId, @RequestBody UserUpdateRequest request){
-        return userService.updateUser(userId,request);
+        return userService.updateUser(userId, request);
     }
 
     @DeleteMapping("/{userId}")
     String deleteUser(@PathVariable String userId){
-        userService.deteleUser(userId);
-        return "user has been deleted";
+        userService.deleteUser(userId);
+        return "User has been deleted";
     }
 }
