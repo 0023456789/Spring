@@ -1,5 +1,6 @@
 package com.example.Second.Configuration;
 
+import com.example.Second.Enum.Role;
 import com.example.Second.Repository.UserRepository;
 import com.example.Second.entity.User;
 import lombok.AccessLevel;
