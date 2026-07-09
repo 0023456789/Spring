@@ -1,9 +1,7 @@
 package com.example.Second.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.Second.Enum.Role;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -24,7 +22,8 @@ public class User {
     String username;
     String password;
     String firstName;
-    String lastName;
     LocalDate dob;
-    Set<String> roles;
+    String lastName;
+    @ManyToMany
+    Set<Role> roles;
 }
