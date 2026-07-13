@@ -1,6 +1,5 @@
 package com.example.Second.entity;
 
-import com.example.Second.Enum.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
