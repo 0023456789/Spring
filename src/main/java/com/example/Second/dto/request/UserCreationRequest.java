@@ -1,4 +1,5 @@
 package com.example.Second.dto.request;
+import com.example.Second.Validator.DobConstraint;
 import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 
@@ -21,5 +22,6 @@ public class UserCreationRequest {
     String password;
     String firstName;
     String lastName;
+    @DobConstraint(min = 18, message = "INVALID_DOB")
     LocalDate dob;
 }
