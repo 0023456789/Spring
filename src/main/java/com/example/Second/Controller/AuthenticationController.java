@@ -2,10 +2,7 @@ package com.example.Second.Controller;
 
 
 import com.example.Second.Service.AuthenticationService;
-import com.example.Second.dto.request.ApiResponse;
-import com.example.Second.dto.request.AuthenticationRequest;
-import com.example.Second.dto.request.IntrospectRequest;
-import com.example.Second.dto.request.LogoutRequest;
+import com.example.Second.dto.request.*;
 import com.example.Second.dto.response.AuthenticationResponse;
 import com.example.Second.dto.response.IntrospectResponse;
 import com.nimbusds.jose.JOSEException;
@@ -39,6 +36,14 @@ public class AuthenticationController {
             throws ParseException, JOSEException {
         var result = authenticationService.introspect(request);
         return ApiResponse.<IntrospectResponse>builder()
+                .result(result)
+                .build();
+    }
+    @PostMapping("/refresh")
+    ApiResponse<AuthenticationResponse> authenticate(@RequestBody RefreshRequest request)
+            throws ParseException, JOSEException {
+        var result = authenticationService.refreshToken(request);
+        return ApiResponse.<AuthenticationResponse>builder()
                 .result(result)
                 .build();
     }
