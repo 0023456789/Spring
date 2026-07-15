@@ -1,18 +1,20 @@
 package com.example.Second.Service;
 
+import java.util.HashSet;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.example.Second.Repository.PermissionRepository;
 import com.example.Second.Repository.RoleRepository;
 import com.example.Second.dto.request.RoleRequest;
 import com.example.Second.dto.response.RoleResponse;
 import com.example.Second.mapper.RoleMapper;
+
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-
-import java.util.HashSet;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

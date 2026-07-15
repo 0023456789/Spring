@@ -1,13 +1,12 @@
 package com.example.Second.dto.request;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import com.example.Second.Validator.DobConstraint;
+
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @Builder
