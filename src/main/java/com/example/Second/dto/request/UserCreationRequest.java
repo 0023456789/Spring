@@ -1,13 +1,13 @@
 package com.example.Second.dto.request;
-import com.example.Second.Validator.DobConstraint;
-import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
+import com.example.Second.Validator.DobConstraint;
+
 import jakarta.validation.constraints.Size;
+
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor

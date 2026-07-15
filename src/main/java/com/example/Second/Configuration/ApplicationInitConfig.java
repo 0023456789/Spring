@@ -1,22 +1,24 @@
 package com.example.Second.Configuration;
 
-import com.example.Second.Constant.PredefinedRole;
-import com.example.Second.entity.Role;
-import com.example.Second.Repository.RoleRepository;
-import com.example.Second.Repository.UserRepository;
-import com.example.Second.entity.User;
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
-import lombok.experimental.NonFinal;
-import lombok.extern.slf4j.Slf4j;
+import java.util.HashSet;
+
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.util.HashSet;
+import com.example.Second.Constant.PredefinedRole;
+import com.example.Second.entity.Role;
+import com.example.Second.Repository.RoleRepository;
+import com.example.Second.Repository.UserRepository;
+import com.example.Second.entity.User;
+
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.experimental.NonFinal;
+import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 @RequiredArgsConstructor

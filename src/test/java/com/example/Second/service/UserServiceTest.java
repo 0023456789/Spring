@@ -1,11 +1,13 @@
 package com.example.Second.service;
 
-import com.example.Second.Exception.AppException;
-import com.example.Second.Repository.UserRepository;
-import com.example.Second.Service.UserService;
-import com.example.Second.dto.request.UserCreationRequest;
-import com.example.Second.dto.response.UserResponse;
-import com.example.Second.entity.User;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+
+import java.time.LocalDate;
+import java.util.Optional;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,13 +17,12 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.TestPropertySource;
 
-import java.time.LocalDate;
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
+import com.example.Second.Exception.AppException;
+import com.example.Second.Repository.UserRepository;
+import com.example.Second.Service.UserService;
+import com.example.Second.dto.request.UserCreationRequest;
+import com.example.Second.dto.response.UserResponse;
+import com.example.Second.entity.User;
 
 @SpringBootTest
 @TestPropertySource("/test.properties")

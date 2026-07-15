@@ -1,13 +1,13 @@
 package com.example.Second.mapper;
 
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 
 import com.example.Second.dto.request.UserCreationRequest;
 import com.example.Second.dto.request.UserUpdateRequest;
 import com.example.Second.dto.response.UserResponse;
 import com.example.Second.entity.User;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {

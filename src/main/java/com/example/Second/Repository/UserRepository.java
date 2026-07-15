@@ -1,9 +1,10 @@
 package com.example.Second.Repository;
 
-import com.example.Second.entity.User;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+import com.example.Second.entity.User;
 
 public interface UserRepository extends JpaRepository<User,String> {
     boolean existsByUsername(String username);
