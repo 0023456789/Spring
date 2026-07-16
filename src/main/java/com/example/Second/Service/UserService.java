@@ -10,7 +10,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.Second.Constant.PredefinedRole;
-import com.example.Second.entity.Role;
 import com.example.Second.Exception.AppException;
 import com.example.Second.Exception.ErrorCode;
 import com.example.Second.Repository.RoleRepository;
@@ -18,6 +17,7 @@ import com.example.Second.Repository.UserRepository;
 import com.example.Second.dto.request.UserCreationRequest;
 import com.example.Second.dto.request.UserUpdateRequest;
 import com.example.Second.dto.response.UserResponse;
+import com.example.Second.entity.Role;
 import com.example.Second.entity.User;
 import com.example.Second.mapper.UserMapper;
 

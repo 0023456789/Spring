@@ -2,6 +2,8 @@ package com.example.Second.Controller;
 
 import java.util.List;
 
+import jakarta.validation.Valid;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,8 +12,6 @@ import com.example.Second.dto.request.ApiResponse;
 import com.example.Second.dto.request.UserCreationRequest;
 import com.example.Second.dto.request.UserUpdateRequest;
 import com.example.Second.dto.response.UserResponse;
-
-import jakarta.validation.Valid;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

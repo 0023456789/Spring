@@ -11,5 +11,3 @@ import lombok.experimental.FieldDefaults;
 public class LogoutRequest {
     String token;
 }
-
-
