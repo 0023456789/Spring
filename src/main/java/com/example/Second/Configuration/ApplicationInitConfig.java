@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.example.Second.Constant.PredefinedRole;
-import com.example.Second.entity.Role;
 import com.example.Second.Repository.RoleRepository;
 import com.example.Second.Repository.UserRepository;
+import com.example.Second.entity.Role;
 import com.example.Second.entity.User;
 
 import lombok.AccessLevel;

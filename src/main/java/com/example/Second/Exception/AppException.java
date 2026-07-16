@@ -1,6 +1,6 @@
 package com.example.Second.Exception;
 
-public class AppException extends RuntimeException{
+public class AppException extends RuntimeException {
 
     public AppException(ErrorCode errorCode) {
         super(errorCode.getMessage());
@@ -17,4 +17,3 @@ public class AppException extends RuntimeException{
         this.errorCode = errorCode;
     }
 }
-
