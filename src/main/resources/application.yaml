@@ -4,10 +4,10 @@ server:
     context-path: /Second
 spring:
   datasource:
-    url: "jdbc:mysql://localhost:3307/databases"
+    url: ${DBMS_CONNECTION:jdbc:mysql://localhost:3306/identity_service}
     driverClassName: "com.mysql.cj.jdbc.Driver"
-    username: root
-    password: root
+    password: ${DBMS_PASSWORD:root}
+    username: ${DBMS_USERNAME:root}
   jpa:
     hibernate:
       ddl-auto: update
