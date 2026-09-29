@@ -1,1 +1,1 @@
-![test](./vnsky.drawio.svg)
+![test](./vnsky.png)
